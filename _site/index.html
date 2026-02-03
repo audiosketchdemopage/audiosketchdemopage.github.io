@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+       &middot; Your awesome title
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Your awesome title" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Your awesome title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Your awesome title" />
+<script type="application/ld+json">
+{"headline":"Your awesome title","@type":"WebSite","url":"http://localhost:4000/","name":"Your awesome title","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Your awesome title</a>
+          <small></small>
+        </h3>
+      </header>
+
+      <main>
+        <div class="home"><h1 id="adversarial-audio-synthesis-using-a-harmonic-percussive-discriminator">Adversarial Audio Synthesis using a Harmonic-Percussive Discriminator</h1>
+
+<p>Submitted to ICASSP 2022 (Paper ID: 5617)</p>
+
+<p><br /></p>
+<h3 id="authors">Authors</h3>
+<p>Jihyun Lee, Hyeongsub Lim, Chanwoo Lee, Inseon Jang, Hong-Goo Kang</p>
+
+<p><br /></p>
+
+<h3 id="proposed-method">Proposed Method</h3>
+
+<p><br />
+<img src="./assets/proposed.png" /></p>
+
+<p><br /></p>
+
+<p>In this paper, we propose a discriminator design scheme for a GAN-based audio signal generation model conditioned on T-F representations. Our proposed discriminator separates the audio signal into harmonic and percussive components and analyzes each component independently.
+By considering these time-frequency properties of both components, our discriminator design differentiates the receptive fields for each component and precisely detects the distortion of audio signals produced by the generator.
+Our method encourages the generator to better reconstruct harmonic and percussive features, which are critical for the quality of the generated signals.</p>
+
+<p><br /></p>
+
+<h3 id="samples">Samples</h3>
+
+<p><br /></p>
+
+<p><strong>Baseline</strong>: ParallelWaveGAN trained with MAESTRO dataset (down-sampled to 16 kHz)</p>
+
+<p><strong>Ablation 1</strong>: Proposed method without a harmonic-percussive separator module</p>
+
+<p><strong>Ablation 2</strong>: Proposed method switching the roles of the harmonic and percussive discriminators</p>
+
+<p><br /></p>
+
+<table style="width: auto; table-layout: fixed; word-wrap: normal;" borded="1" border-collapse="collapse">
+
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong></strong></td>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Reference</strong></td>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Baseline</strong></td>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Proposed</strong></td>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Ablation 1</strong></td>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Ablation 2</strong></td>
+</tr>
+
+<!--Sample 1-->
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 1</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/074_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/074_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/074_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/074_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/074_reverse.wav" /></audio></td>
+</tr>
+
+<!--Sample 2-->
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 2</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/108_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/108_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/108_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/108_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/108_reverse.wav" /></audio></td>
+</tr>
+
+<!--Sample 2-->
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 3</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/032_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/032_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/032_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/032_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/032_reverse.wav" /></audio></td>
+</tr>
+
+<!--Sample 2-->
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 4</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/097_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/097_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/097_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/097_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/097_reverse.wav" /></audio></td>
+</tr>
+
+<!--Sample 2-->
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 5</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/083_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/083_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/083_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/083_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/083_reverse.wav" /></audio></td>
+</tr>
+
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 6</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/066_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/066_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/066_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/066_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/066_reverse.wav" /></audio></td>
+</tr>
+
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 7</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/027_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/027_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/027_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/027_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/027_reverse.wav" /></audio></td>
+</tr>
+
+<tr>
+<td style="column-width: auto; padding-left: 10px; padding-right: 10px"><strong>Sample 8</strong></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/052_reference.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/052_baseline.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/052_proposed.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/052_wo_hpss.wav" /></audio></td>
+<td><audio controls="" style="width: 150px;"><source src="./assets/demo_samples/052_reverse.wav" /></audio></td>
+</tr>
+</table>
+
+<p>​</p>
+
+<h2 class="post-list-heading">Posts</h2>
+    <ul class="post-list"><li><span class="post-meta">Jan 8, 2022</span>
+        <h3>
+          <a class="post-link" href="/jekyll/update/2022/01/08/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li><li><span class="post-meta">Dec 3, 2021</span>
+        <h3>
+          <a class="post-link" href="/jekyll/update/2021/12/03/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li><li><span class="post-meta">Sep 8, 2021</span>
+        <h3>
+          <a class="post-link" href="/jekyll/update/2021/09/08/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li></ul>
+
+    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2022-01-11T19:06:57+09:00">2022</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
