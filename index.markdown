@@ -25,11 +25,7 @@ Jihyun Lee, Jiahao Li, Woojin Chung, Yan Lu, and Hong-Goo Kang
 
 <br />
 
-In this paper, we propose AudioSketch, a diffusion-based image-to-audio (I2A) generation model with an effective and user-friendly energy guidance mechanism.
-Unlike prior methods that either employ overly simplistic or impractically complex energy controls, our approach introduces an energy modulator that transforms user-provided energy inputs into a more effective representation, enabling the synthesis of high-quality and natural audio.
-To identify the optimal energy structure, we conduct an in-depth analysis of how different energy representations influence audio quality, temporal fidelity, and image-audio relevance.
-Integrated with a lightweight neural network that maps image features to audio-related representations, our I2A framework enables a progressive translation process: from the image and a user-provided control to a refined energy representation, and then from those conditions to controlled audio synthesis.
-Our evaluation results demonstrate that AudioSketch outperforms previous I2A approaches in terms of audio quality, image-audio semantic consistency, and temporal alignment with user controls. 
+In this paper, we propose AudioSketch, a diffusion-based image-to-audio (I2A) generation model with an effective and user-friendly energy guidance mechanism. Unlike prior methods that rely on either overly simplistic or impractically complex energy controls, AudioSketch introduces an energy modulator that transforms user-provided energy inputs into a refined and expressive representation, enabling the synthesis of high-quality and natural-sounding audio. To identify an optimal energy structure, we conduct an in-depth analysis of how different energy representations influence audio quality, temporal fidelity, and image-audio semantic alignment. Integrated with a lightweight neural network that maps image features to audio-related representations, our framework supports a progressive translation process: from an image and user-provided control to a refined energy representation, and subsequently from these conditions to controllable audio synthesis. Experimental results demonstrate that AudioSketch consistently outperforms existing I2A approaches in terms of audio quality and image-audio semantic consistency, while providing intuitive and perceptually meaningful temporal control over the generated audio. Audio samples are available on our demo page.
 
 <br />
 
