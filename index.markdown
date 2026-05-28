@@ -8,7 +8,7 @@ layout: home
 
 # AudioSketch: Controllable Image-to-Audio Generation via Semantic-Temporal Energy Modulation
 
-Submitted to EUSIPCO 2026
+Accepted to EUSIPCO 2026
 
 <br />
 ### Authors
