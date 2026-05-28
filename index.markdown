@@ -188,7 +188,7 @@ We conduct ablation studies on different energy representations used as conditio
 
 Given an user-friendly timestamp input, applying **energy modulator** improves audio quality and naturalness while preserving temporal alignment.
 
-Without a **semantic embedding**, however, the modulator fails to estimate the target energy representation.
+Without a **semantic embedding**, however, the modulator loses the temporal information of the input timestamp, disabling the overall model from operating as a temporal-controllable audio generator.
 
 <span style="color:blue">Blue curves</span> depict <span style="color:blue">the input timestamps</span> or <span style="color:blue">modulated energy trajectories</span> provided to ControlNet.
 
