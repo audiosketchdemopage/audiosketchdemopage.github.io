@@ -18,7 +18,7 @@ Jihyun Lee, Jiahao Li, Woojin Chung, Yan Lu, and Hong-Goo Kang
 
 
 
-### Proposed Method
+### Abstract
 
 <br />
 <img src="./assets/proposed.png"> 
